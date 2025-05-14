@@ -1,61 +1,43 @@
-
-
-catalogo = [] # 
+books = []
 
 def add_book():
-    titulo = input("Ingresa el titulo del libro: ").strip()
-    autor = input("Ingresa el nombre del autor del libro: ").strip()
-
-    try:
-        cantidad = int(input("Ingresa la cantidad de libros : "))
-        precio = float(input("Ingresa el precio del libro: "))
-
-        if cantidad <= 0 or precio <=0:
-            print("El precio y la cantidad debe ser superior a 0")
-            return
-    except ValueError:
-        print("Debes ingresar un número") 
-        return
-    
-    catalogo.append({"titulo":titulo,"autor":autor,"cantidad":cantidad,"precio":precio})
-    
-    print("Libro agregado exitosamente.\n")
-
+    title = input("Enter TITLE: ").strip()
+    author = input("Enter AUTHOR: ").strip()
+    stock = int(input("Enter the amount: "))
+    books.append({"title": title, "author": author, "stock": stock})
+    print("Book added successfully.\n")
 
 def find_book():
-    consulta = input("Ingresa el nombre del libro o el autor a consultar: ").strip().lower()
-    encontrado = False
-    for libro in catalogo:
-        if consulta in libro["titulo"].lower() or consulta in libro["autor"].lower():
-            show_book(libro)
-            encontrado = True
-        if not encontrado:
-            print("Libro no encontrado. ")
+    search = input("Enter title to search: ").strip().lower()
+    for book in books:
+        if search in book["title"].lower():
+            print(f"Found: {book}")
+            return
+    print("Book not found.\n")
 
-def show_book(libro):
-    print("Detalles del libro")
-    print(f"Título: {libro['titulo']}")
-    print(f"Autor: {libro['autor']}")
-    print(f"Cantidad: {libro['cantidad']}")
-    print(f"Precio: {libro['precio']}")
+def show_books():
+    if not books:
+        print("No books.\n")
+    for book in books:
+        print(book)
 
-def menu_main():
+# Example menu
+def menu():
     while True:
-        print("1. Añadir libro")
-        print("2. Buscar libro")
-        print("3. Salir")
-        opcion = input("Ingresa una opción: ").strip()
-    
-        if opcion == '1':
+        print("1. Add book")
+        print("2. Find book")
+        print("3. Show all books")
+        print("4. Exit")
+        option = input("Select an option: ").strip()
+        if option == "1":
             add_book()
-        elif opcion == '2':
+        elif option == "2":
             find_book()
-        elif opcion == '3':
-            print("Hasta pronto.")
+        elif option == "3":
+            show_books()
+        elif option == "4":
             break
+        else:
+            print("Option no valid.\n")
 
-
-
-
-if __name__ =="__main__":
-    menu_main()    
+menu()
