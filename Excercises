@@ -1,0 +1,129 @@
+"""1. 📚 Library Book Tracker
+
+Sistema para gestionar una biblioteca virtual:
+
+    Añadir libros (título, autor, páginas)
+    Buscar libros por título
+    Mostrar todos los libros disponibles
+
+2. 🎓 Student Grade Manager
+
+Registro de estudiantes y sus calificaciones:
+
+    Añadir estudiantes
+    Registrar calificaciones
+    Calcular el promedio por estudiante
+
+3. 🍽️ Restaurant Menu Editor
+
+Gestión de menú en un restaurante:
+
+    Añadir platos (nombre, precio, disponibilidad)
+    Modificar disponibilidad
+    Calcular total de platos disponibles
+
+4. 📦 Warehouse Box Counter
+
+Seguimiento de cajas en un almacén:
+
+    Añadir tipos de caja
+    Actualizar cantidades
+    Verificar si hay cantidad suficiente
+
+5. 🎬 Movie Rating System
+
+Sistema de calificación de películas:
+
+    Añadir películas
+    Registrar calificaciones (1–5)
+    Calcular promedio de calificación
+
+6. 🧑‍💻 Online Course Tracker
+
+Gestión de cursos en línea:
+
+    Registrar cursos (título, duración, inscritos)
+    Actualizar número de inscritos
+    Filtrar por duración mínima
+
+7. ✅ To-Do List Organizer
+
+Lista de tareas con prioridades y estado:
+
+    Añadir tareas
+    Marcar tareas como completadas
+    Filtrar por prioridad o estado
+
+8. 💸 Digital Wallet
+
+Billetera digital con gastos por categoría:
+
+    Registrar gastos
+    Calcular total gastado
+    Calcular porcentaje por categoría
+
+9. 🐶 Pet Adoption Center
+
+Centro de adopción de mascotas:
+
+    Añadir mascotas (nombre, especie, edad)
+    Buscar por especie
+    Filtrar por edad
+
+10. 🏋️ Gym Membership System
+
+Gestión de socios de gimnasio:
+
+    Registrar nuevos socios
+    Cambiar plan de membresía
+    Listar socios con pagos atrasados
+--------------------------------------------------------------
+# 1. Library Book Tracker
+def add_book(): pass
+def find_book(): pass
+def show_books(): pass
+
+# 2. Student Grade Manager
+def add_student(): pass
+def add_grade(): pass
+def get_average(): pass
+
+# 3. Restaurant Menu Editor
+def add_dish(): pass
+def change_availability(): pass
+def total_available_price(): pass
+
+# 4. Warehouse Box Counter
+def add_box(): pass
+def update_quantity(): pass
+def has_enough(): pass
+
+# 5. Movie Rating System
+def add_movie(): pass
+def rate_movie(): pass
+def average_rating(): pass
+
+# 6. Online Course Tracker
+def add_course(): pass
+def update_enrollment(): pass
+def filter_by_hours(): pass
+
+# 7. To-Do List Organizer
+def add_task(): pass
+def complete_task(): pass
+def filter_tasks(): pass
+
+# 8. Digital Wallet
+def add_expense(): pass
+def total_spent(): pass
+def expense_percentages(): pass
+
+# 9. Pet Adoption Center
+def add_pet(): pass
+def find_by_species(): pass
+def older_than(): pass
+
+# 10. Gym Membership System
+def register_member(): pass
+def change_plan(): pass
+def unpaid_members(): pass"""

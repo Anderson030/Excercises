@@ -1,6 +1,6 @@
 
 
-catalogo = [ ] # 
+catalogo = [] # 
 
 def add_book():
     titulo = input("Ingresa el titulo del libro: ").strip()
@@ -22,35 +22,40 @@ def add_book():
     print("Libro agregado exitosamente.\n")
 
 
-    def find_book():
-        consulta = input("Ingresa el nombre del libro o el autor a consultar: ").strip().lower()
-        encontrado = False
-        for libro in catalogo:
-            if consulta in libro["titulo"].lower() or consulta in libro["autor"].lower():
-                show_book(libro)
-                encontrado = True
-            if not encontrado:
-                print("Libro no encontrado. ")
+def find_book():
+    consulta = input("Ingresa el nombre del libro o el autor a consultar: ").strip().lower()
+    encontrado = False
+    for libro in catalogo:
+        if consulta in libro["titulo"].lower() or consulta in libro["autor"].lower():
+            show_book(libro)
+            encontrado = True
+        if not encontrado:
+            print("Libro no encontrado. ")
 
-    def show_book(libro):
-        print("Detalles del libro")
-        print(f"Título: {libro['titulo']}")
-        print(f"Titulo: {libro['autor']}")
-        print(f"Titulo: {libro['cantidad']}")
-        print(f"Titulo: {libro['precio']}")
+def show_book(libro):
+    print("Detalles del libro")
+    print(f"Título: {libro['titulo']}")
+    print(f"Autor: {libro['autor']}")
+    print(f"Cantidad: {libro['cantidad']}")
+    print(f"Precio: {libro['precio']}")
 
-    def menu_main():
-        while True:
-            print("1. Añadir libro")
-            print("2. Buscar libro")
-            opcion = input("Ingresa una opción: ").strip()
+def menu_main():
+    while True:
+        print("1. Añadir libro")
+        print("2. Buscar libro")
+        print("3. Salir")
+        opcion = input("Ingresa una opción: ").strip()
     
-            if opcion == '1':
-                add_book()
-            elif opcion == '2':
-                find_book()
+        if opcion == '1':
+            add_book()
+        elif opcion == '2':
+            find_book()
+        elif opcion == '3':
+            print("Hasta pronto.")
+            break
 
 
 
-    if __name__ =="__main__":
-        menu_main()    
+
+if __name__ =="__main__":
+    menu_main()    
